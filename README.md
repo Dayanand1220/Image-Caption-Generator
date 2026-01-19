@@ -30,7 +30,7 @@ A modern, full-stack web application that generates intelligent captions for ima
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/image-caption-generator.git
+git clone https://github.com/Dayanand1220/image-caption-generator.git
 cd image-caption-generator
 ```
 
@@ -147,9 +147,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 If you encounter any issues or have questions:
-1. Check the [Issues](https://github.com/yourusername/image-caption-generator/issues) page
+1. Check the [Issues](https://github.com/Dayanand1220/image-caption-generator/issues) page
 2. Create a new issue with detailed description
-3. Join our [Discussions](https://github.com/yourusername/image-caption-generator/discussions)
+3. Join our [Discussions](https://github.com/Dayanand1220/image-caption-generator/discussions)
 
 ---
 
