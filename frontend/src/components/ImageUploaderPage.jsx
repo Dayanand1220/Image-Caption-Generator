@@ -384,7 +384,9 @@ const ImageUploaderPage = ({ onBackToHome, onSignOut, userName = 'User' }) => {
       form.append('includeHashtags', includeHashtags); // Send hashtag preference to backend
       form.append('user_id', userName); // Assuming userName is a unique identifier for the user
 
-      const response = await axios.post('http://localhost:5123/api/caption/generate', form, {
+      // Use environment variable for API URL, fallback to localhost for development
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5123';
+      const response = await axios.post(`${apiUrl}/api/caption/generate`, form, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 
