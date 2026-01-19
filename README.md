@@ -111,20 +111,22 @@ image-caption-generator/
 
 ## 🚀 Deployment Options
 
-### Option 1: Vercel + Railway (Recommended)
-- **Frontend**: Deploy to Vercel
-- **Backend**: Deploy to Railway
-- **Database**: MongoDB Atlas
-
-### Option 2: Heroku
-- Deploy both frontend and backend to Heroku
-- Use Heroku Postgres or MongoDB Atlas
-
-### Option 3: Docker
+### Option 1: Simple Local Hosting
 ```bash
-# Build and run with Docker
-docker-compose up --build
+# Just run it locally and share your IP
+cd backend && python app_minimal.py
+cd frontend && npm start
 ```
+
+### Option 2: GitHub Pages (Frontend Only)
+1. Build the frontend: `npm run build`
+2. Push to GitHub
+3. Enable GitHub Pages in repository settings
+
+### Option 3: Free Hosting Platforms
+- **Frontend**: [Netlify](https://netlify.com) or [Vercel](https://vercel.com)
+- **Backend**: [Railway](https://railway.app) or [Render](https://render.com)
+- Just connect your GitHub repository!
 
 ## 🤝 Contributing
 
