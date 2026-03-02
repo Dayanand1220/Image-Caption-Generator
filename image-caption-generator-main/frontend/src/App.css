@@ -1,0 +1,319 @@
+/* App.css - Modern Purple Gradient Theme */
+
+/* 1. Global Reset and Base Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* 2. Main Application Container */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+/* 3. Enhanced Header with Modern Design */
+.App-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 20px 30px;
+  color: #1f2937;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+/* Add a subtle gradient overlay to header */
+.App-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+  z-index: -1;
+}
+
+/* 4. Modern Heading Styling */
+.App-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.5px;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Enhanced highlight styling - USED FOR ALIGNMENT AND GLOW CONTAINMENT */
+.App-header h1 .highlight {
+  font-weight: 900;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Apply gradient only to the highlighted text (word "AI") */
+.App-header h1 .highlight .highlight-text {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* NEW: Style for the AI Bot Image Logo */
+.App-header h1 .highlight .ai-image-logo {
+  height: 40px; /* Adjust size as needed */
+  width: auto; /* Maintain aspect ratio */
+  /* Remove any text-related gradient styles as they don't apply to images */
+  line-height: 1; /* Helps with vertical alignment */
+  transform: translateY(2px); /* Slight vertical adjustment if needed */
+}
+
+/* REMOVED: Old styling for Font Awesome icon (i) */
+/*
+.App-header h1 .highlight i {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.5em; 
+  line-height: 1;
+  transform: translateY(1px);
+}
+*/
+
+/* Add a subtle glow effect to the highlight */
+.App-header h1 .highlight::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  opacity: 0.1; 
+  filter: blur(5px); 
+  z-index: -1;
+  width: 100%; 
+}
+
+/* 5. Main content area */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 6. Responsive Design */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 15px 20px;
+  }
+  
+  .App-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .App-header h1 .highlight .ai-image-logo {
+    height: 32px; /* Smaller size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    padding: 12px 15px;
+  }
+  
+  .App-header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+  }
+  
+  .App-header h1 .highlight .ai-image-logo {
+    height: 28px; /* Even smaller size */
+  }
+}
+
+/* 7. Add some subtle animations */
+.App-header {
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 8. Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* 9. Focus styles for accessibility */
+*:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* 10. Selection styling */
+::selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: #1f2937;
+}
+
+/* 11. Contact Page Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 230, 150, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 230, 150, 0.9);
+  }
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
+  }
+}
+
+@keyframes imageFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-5px);
+  }
+  75% {
+    transform: translateY(-25px) translateX(-10px);
+  }
+}
+
+@keyframes backgroundShift {
+  0%, 100% {
+    background: `
+      radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%)
+    `;
+  }
+  50% {
+    background: `
+      radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 60% 60%, rgba(120, 219, 255, 0.2) 0%, transparent 50%)
+    `;
+  }
+}

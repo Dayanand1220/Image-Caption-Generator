@@ -1,0 +1,197 @@
+/* AuthPage Responsive Styles and Enhancements */
+
+/* Smooth page entrance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.auth-card {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Input focus glow effect */
+.input-wrapper:focus-within {
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+    background: #ffffff !important;
+}
+
+/* Button hover lift effect */
+.submit-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5) !important;
+}
+
+/* Tab hover effect */
+.tab:hover:not(:disabled) {
+    background: rgba(102, 126, 234, 0.05);
+}
+
+/* Smooth color transitions */
+* {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tablet and below */
+@media (max-width: 968px) {
+    .auth-card {
+        flex-direction: column !important;
+        max-width: 600px !important;
+    }
+    
+    .left-panel {
+        flex: 0 0 auto !important;
+        padding: 40px 30px !important;
+        min-height: 250px;
+    }
+    
+    .brand-title {
+        font-size: 28px !important;
+    }
+    
+    .brand-subtitle {
+        font-size: 14px !important;
+    }
+    
+    .feature-list {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 12px !important;
+    }
+    
+    .feature-item {
+        flex: 0 0 calc(50% - 6px);
+        font-size: 13px !important;
+    }
+    
+    .right-panel {
+        padding: 40px 30px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .auth-card {
+        margin: 10px;
+        border-radius: 16px !important;
+    }
+    
+    .left-panel {
+        padding: 30px 20px !important;
+        min-height: 200px;
+    }
+    
+    .logo {
+        width: 60px !important;
+        height: 60px !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .brand-title {
+        font-size: 24px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .brand-subtitle {
+        font-size: 13px !important;
+        margin-bottom: 24px !important;
+    }
+    
+    .feature-list {
+        gap: 8px !important;
+    }
+    
+    .feature-item {
+        flex: 0 0 100%;
+        font-size: 12px !important;
+    }
+    
+    .right-panel {
+        padding: 30px 20px !important;
+    }
+    
+    .tab-container {
+        margin-bottom: 24px !important;
+    }
+    
+    .tab {
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+    }
+    
+    .form {
+        gap: 16px !important;
+    }
+    
+    .label {
+        font-size: 13px !important;
+    }
+    
+    .input,
+    .select {
+        font-size: 14px !important;
+        padding: 10px 10px 10px 0 !important;
+    }
+    
+    .submit-button {
+        padding: 12px 20px !important;
+        font-size: 15px !important;
+    }
+}
+
+/* Hover effects for desktop */
+@media (hover: hover) {
+    .submit-button:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5) !important;
+    }
+    
+    .tab:hover:not(:disabled) {
+        background: rgba(102, 126, 234, 0.05);
+    }
+    
+    .forgot-password:hover,
+    .back-button:hover {
+        text-decoration: underline;
+    }
+    
+    .input-wrapper:focus-within {
+        border-color: #667eea !important;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+}
+
+/* Animation for form appearance */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form {
+    animation: slideIn 0.4s ease-out;
+}
+
+/* Loading state animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.submit-button:disabled {
+    animation: pulse 1.5s ease-in-out infinite;
+}

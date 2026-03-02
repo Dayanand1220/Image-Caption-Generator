@@ -1,0 +1,13 @@
+Flask
+Flask-PyMongo
+Flask-CORS
+bcrypt
+python-dotenv
+transformers
+torch
+Pillow
+pymongo
+accelerate
+numpy
+requests 
+google-generativeai
